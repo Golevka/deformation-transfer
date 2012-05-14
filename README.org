@@ -2,7 +2,7 @@
 
 #+CAPTION: Deformation transfer copies the deformations of a horse to a camel, generating several new deformed camel models. This technique can also be used in facial expression coloning.
 #+LABEL:   shakedown-run
-[[[[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/dt-horse-camel-face-head.png]]]]
+[[[[./RESULTS/dt-horse-camel-face-head.png]]]]
 
 
 * WHAT'S THIS?
@@ -22,7 +22,7 @@ You need CHOLMOD (http://www.cise.ufl.edu/research/sparse/cholmod/) and UMFPACK
 header files and libs to the ./external folder if you've compiled them on your
 own, or just try the precompiled version in this repository.
 
-After these libs has been set properly, type `make` to build them all.
+After these libs has been set properly, type =make= to build them all.
 
 
 * TRY A SHAKEDOWN RUN:
@@ -41,7 +41,9 @@ Correspondence phase: You need to pick up a small set of marker points to
 specify the semantic correspondence between the source model and the target
 model, we provided a tool here (corrstool), you can launch it using
 
+#+BEGIN_SRC shell
     ./corrstool source_model target_model
+#+END_SRC
 
 for example, running this command in bin directory
     
@@ -54,18 +56,19 @@ at the right panel, drag your mouse with left mouse button pressed to view the
 model in a different angle (it would change the view angle of the two panels
 simutanously), and drag with right mouse button pressed to zoom the view.
 
-[[[[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/correstool.png]]]]
+[[[[./RESULTS/correstool.png]]]]
+
 
 You can move the cursor to somewhere in the model you want to mark and press
-"P" to mark this point, after having specifed marker points on both models,
-press "A" to "commit" this point pair to correspondence list, if you hit "A" by
-mistake, just hit "U" (undo) to recover from that.
+=P= to mark this point, after having specifed marker points on both models,
+press =A= to "commit" this point pair to correspondence list, if you hit =A= by
+mistake, just hit =U= (undo) to recover from that.
 
 The points you picked up may not right on where your cursor pointed to, this is
-because of marker points can ONLY appear on vertices of the mesh model, you can
-view models in wired mode by pressing "M", and press it again to get back to
+because of marker points can *only* appear on vertices of the mesh model, you can
+view models in wired mode by pressing =M=, and strike it again to get back to
 solid mode. If you want to switch to another point on the same piece of triangle, 
-just hit "C" many times until you get what you want.
+just hit =C= many times until you get what you want.
 
-After all marker points has been specified, press "W" to write the
+After all marker points has been specified, press =W= to write the
 correspondence to a .cons file (default.cons by default).
