@@ -1,8 +1,8 @@
 #+TITLE Deformation Transfer in ANSI C
 
 #+CAPTION: Deformation transfer copies the deformations of a horse to a camel, generating several new deformed camel models. This technique can also be used in facial expression coloning.
-#+LABEL:   shakedown-run
-[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/dt-horse-camel-face-head.png]
+#+LABEL:   demonstration
+[[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/dt-horse-camel-face-head.png]]
 
 
 * What's This?
@@ -22,6 +22,8 @@ After these libs has been set properly, type =make= to build them all.
 * Try A Shakedown Run
 
 Run sample_run.sh in bin directory, the resulting deformed target model would be shown by our corrstool. The calculation takes about one minutes or so (resolving corresponence and deforming 10 models).
+
+[[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/shakedown_run.png]]
 
 You can read the comments in sample_run.sh to see how to apply these tools to your own .OBJ models.
 
