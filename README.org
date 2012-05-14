@@ -1,4 +1,4 @@
-#+TITLE Deformation Transfer in ANSI C
+#+TITLE: Deformation Transfer in ANSI C
 
 #+CAPTION: Deformation transfer copies the deformations of a horse to a camel, generating several new deformed camel models. This technique can also be used in facial expression coloning.
 #+LABEL:   demonstration
