@@ -2,10 +2,11 @@
 
 #+CAPTION: Deformation transfer copies the deformations of a horse to a camel, generating several new deformed camel models. This technique can also be used in facial expression coloning.
 #+LABEL:   shakedown-run
-[[[[./RESULTS/dt-horse-camel-face-head.png]]]]
+
+https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/dt-horse-camel-face-head.png
 
 
-* WHAT'S THIS?
+* What's This?
 
 This is an implementation of Deformation Transfer algorithm in ANSI C, which
 could transfer the deformation of one triangle mesh to another. Check this
@@ -15,7 +16,7 @@ explaination of this algorithm and here
 and mesh data.
 
 
-* COMPILE
+* Compile
 
 You need CHOLMOD (http://www.cise.ufl.edu/research/sparse/cholmod/) and UMFPACK
 (http://www.cise.ufl.edu/research/sparse/umfpack/) to compile it, throw the
@@ -25,7 +26,7 @@ own, or just try the precompiled version in this repository.
 After these libs has been set properly, type =make= to build them all.
 
 
-* TRY A SHAKEDOWN RUN:
+* Try A Shakedown Run
 
 Run sample_run.sh in bin directory, the resulting deformed target model would
 be shown by our corrstool. The calculation takes about one minutes or so
@@ -35,7 +36,7 @@ You can read the comments in sample_run.sh to see how to apply these tools to
 your own .OBJ models.
 
 
-* USAGE OF CORRSTOOL:
+* Usage of Corrstool
 
 Correspondence phase: You need to pick up a small set of marker points to
 specify the semantic correspondence between the source model and the target
@@ -56,8 +57,7 @@ at the right panel, drag your mouse with left mouse button pressed to view the
 model in a different angle (it would change the view angle of the two panels
 simutanously), and drag with right mouse button pressed to zoom the view.
 
-[[[[./RESULTS/correstool.png]]]]
-
+https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/correstool.png
 
 You can move the cursor to somewhere in the model you want to mark and press
 =P= to mark this point, after having specifed marker points on both models,
