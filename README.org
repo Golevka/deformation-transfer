@@ -59,5 +59,7 @@ view models in wired mode by pressing =M=, and strike it again to get back to
 solid mode. If you want to switch to another point on the same piece of triangle, 
 just hit =C= many times until you get what you want.
 
+[[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/wired_mode.png]]
+
 After all marker points has been specified, press =W= to write the
 correspondence to a .cons file (default.cons by default).
