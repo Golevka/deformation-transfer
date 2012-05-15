@@ -21,7 +21,7 @@ After these libs has been set properly, type =make= to build them all.
 
 * Try A Shakedown Run
 
-Run sample_run.sh in bin directory, the resulting deformed target model would be shown by our corrstool. The calculation takes about one minutes or so (resolving corresponence and deforming 10 models).
+Run sample_run.sh in bin directory, the resulting deformed target model would be shown by our corrstool. The calculation takes about one minute or so (resolving corresponence and deforming 10 models).
 
 [[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/shakedown_run.png]]
 
