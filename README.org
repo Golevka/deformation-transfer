@@ -1,36 +1,48 @@
 #+TITLE: Deformation Transfer in ANSI C
 
-#+CAPTION: Deformation transfer copies the deformations of a horse to a camel, generating several new deformed camel models. This technique can also be used in facial expression coloning.
+#+CAPTION: Demonstration
 #+LABEL:   demonstration
 [[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/dt-horse-camel-face-head.png]]
 
 
 * What's This?
 
-This is an implementation of Deformation Transfer algorithm in ANSI C, which could transfer the deformation of one triangle mesh to another. Check this paper (http://people.csail.mit.edu/sumner/research/deftransfer/Sumner2004DTF.pdf) for detailed explaination of this algorithm and here
+This is an implementation of Deformation Transfer algorithm in ANSI C, which
+could transfer the deformation of one triangle mesh to another. Check this
+paper
+(http://people.csail.mit.edu/sumner/research/deftransfer/Sumner2004DTF.pdf) for
+detailed explaination of this algorithm and here
 (http://people.csail.mit.edu/sumner/research/deftransfer/) for demonstrations
 and mesh data.
 
 
 * Compile
 
-You need CHOLMOD (http://www.cise.ufl.edu/research/sparse/cholmod/) and UMFPACK (http://www.cise.ufl.edu/research/sparse/umfpack/) to compile it, drop the header files and libs to the ./external folder if you've compiled them on your own, or just try the precompiled version in this repository.
+You need CHOLMOD (http://www.cise.ufl.edu/research/sparse/cholmod/) and UMFPACK
+(http://www.cise.ufl.edu/research/sparse/umfpack/) to compile it, drop the
+header files and libs to the ./external folder if you've compiled them on your
+own, or just try the precompiled version in this repository.
 
 After these libs has been set properly, type =make= to build them all.
 
 
 * Try A Shakedown Run
 
-Run sample_run.sh in bin directory, the resulting deformed target model would be shown by our corrstool. The calculation takes about one minutes or so (resolving corresponence and deforming 10 models).
+Run sample_run.sh in bin directory, the resulting deformed target model would
+be shown by our corrstool. The calculation takes about one minutes or so
+(resolving corresponence and deforming 10 models).
 
 [[https://github.com/Golevka/deformation-transfer/raw/master/RESULTS/shakedown_run.png]]
 
-You can read the comments in sample_run.sh to see how to apply these tools to your own .OBJ models.
+You can read the comments in sample_run.sh to see how to apply these tools to
+your own .OBJ models.
 
 
 * Usage of Corrstool
 
-Correspondence phase: You need to pick up a small set of marker points to specify the semantic correspondence between the source model and the target model, we provided a tool here (corrstool), you can launch it using
+Correspondence phase: You need to pick up a small set of marker points to
+specify the semantic correspondence between the source model and the target
+model, we provided a tool here (corrstool), you can launch it using
 
 #+BEGIN_SRC shell
     ./corrstool source_model target_model
@@ -42,7 +54,10 @@ for example, running this command in bin directory
     ./corrstool horse_ref.obj camel_ref.obj
 #+END_SRC
      
-would open a window showing the source model at the left panel and target model at the right panel, drag your mouse with left mouse button pressed to view the model in a different angle (it would change the view angle of the two panels simutanously), and drag with right mouse button pressed to zoom the view.
+would open a window showing the source model at the left panel and target model
+at the right panel, drag your mouse with left mouse button pressed to view the
+model in a different angle (it would change the view angle of the two panels
+simutanously), and drag with right mouse button pressed to zoom the view.
 
 #+CAPTION: Corrstool
 #+LABEL:   corrstool

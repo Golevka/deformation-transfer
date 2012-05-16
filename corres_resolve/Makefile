@@ -7,4 +7,6 @@ EXTERNAL_LIBS := $(wildcard ../external/lib/*.a)
 LDLIBS := -lm -lpthread
 
 
+CFLAGS += -O3
+
 include ../makefile.mk
