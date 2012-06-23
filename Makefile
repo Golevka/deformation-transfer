@@ -1,20 +1,19 @@
-default:
-	make clean; make all
-
 all:
-	cd modelviz;         make; make clean
-	cd corrstool;        make; make clean
-#	cd adjtool;          make; make clean
-	cd corres_resolve;   make; make clean
-	cd dtrans;	     make; make clean
+	cd modelviz;         make;
+	cd corrstool;        make;
+	cd corres_resolve;   make;
+	cd dtrans;	     make;
 
-	cp ./modelviz/run    ./bin/modelviz
-	cp ./corrstool/run   ./bin/corrstool
-#	cp ./adjtool/run     ./bin/adjtool
-	cp ./corres_resolve/run ./bin/corres_resolve
-	cp ./dtrans/run		./bin/dtrans
+	mv ./modelviz/run        ./bin/modelviz
+	mv ./corrstool/run       ./bin/corrstool
+	mv ./corres_resolve/run  ./bin/corres_resolve
+	mv ./dtrans/run	         ./bin/dtrans
 
 clean:
+	cd modelviz;         make clean;
+	cd corrstool;        make clean;
+	cd corres_resolve;   make clean;
+	cd dtrans;	     make clean;
 	rm \
 		./bin/modelviz 		\
 		./bin/corrstool 	\
